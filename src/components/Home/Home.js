@@ -1,33 +1,66 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import homeLogo from "../../Assets/home-main.svg";
-import Particle from "../Particle";
+// import Particle from "../Particle";
 import Home2 from "./Home2";
-import Type from "./Type";
+// import Type from "./Type";
+import Typewriter from "typewriter-effect";
+
+function TypeHello() {
+  return (
+    <Typewriter
+      options={{
+        strings: [
+          "Hi!" ,
+          "Hello!",
+          "Greeting!",
+        ],
+        autoStart: true,
+        loop: true,
+        deleteSpeed: 100,
+      }}
+    />
+  );
+}
+
 
 function Home() {
   return (
     <section>
       <Container fluid className="home-section" id="home">
-        <Particle />
+        {/* <Particle /> */}
         <Container className="home-content">
           <Row>
             <Col md={7} className="home-header">
-              <h1 style={{ paddingBottom: 15 }} className="heading">
-                Hi There!{" "}
+              {/* <h1 style={{ paddingBottom: 15 }} className="heading">
+                Hi! Hello!{" "}
                 <span className="wave" role="img" aria-labelledby="wave">
                   👋🏻
                 </span>
-              </h1>
+              </h1> */}
+              <div style={{ padding: 50, textAlign: "left" }}>
+                <TypeHello />
+              </div>
+
 
               <h1 className="heading-name">
                 I'M
-                <strong className="main-name"> SOUMYAJIT BEHERA</strong>
+                <strong className="main-name"> CHHAY MANUTH</strong>
               </h1>
+              
+              <h2 style={{ paddingLeft: 50}} className="home-header">
+                A <strong  className="purple">Cyber Security Student</strong>
+                <br/>
+                from
+                <strong className="main-name" > Phnom Penh,</strong>
+                <strong className="main-name" > Cambodia</strong>
+              </h2>
 
-              <div style={{ padding: 50, textAlign: "left" }}>
+              {/* <div style={{ padding: 50, textAlign: "left" }}>
                 <Type />
-              </div>
+              </div> */}
+
+            
             </Col>
 
             <Col md={5} style={{ paddingBottom: 20 }}>
